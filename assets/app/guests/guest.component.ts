@@ -15,6 +15,6 @@ export class WeddingGuestComponent implements OnInit {
     onDelete() {};
 
     ngOnInit() {
-        this.showExtraInfo = this.guest.email || this.guest.numberOfGuests || this.guest.guestNames || this.guest.mealChoice || this.guest.guestMealChoice || this.guest.songSuggestion || this.guest.dietaryRestrictions;
+        this.showExtraInfo = !!(this.guest.email || this.guest.numberOfGuests || this.guest.guestNames || this.guest.mealChoice || this.guest.guestMealChoice || this.guest.songSuggestion || this.guest.dietaryRestrictions);
     }
 }
