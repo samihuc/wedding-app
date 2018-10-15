@@ -1,0 +1,38 @@
+input, select {
+    max-width: 600px;
+}
+input:disabled, select:disabled {
+    background-color: #dadbdc;
+}
+.submit-button {
+    margin-top: 15px;
+    background-color: #1E3056;
+}
+.submit-button:hover,
+.submit-button:focus {
+    text-decoration-color: #E2E3E4;
+    color: #E2E3E4;
+    padding: 7px 13px;
+}
+.rsvp-form {
+    margin-top: 30px;
+}
+a {
+    text-decoration: underline;
+}
+.question {
+    margin-top: 10px;
+}
+.radio input {
+    padding-left: 40px;
+}
+.checkBoxLabel {
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+.checkBox input {
+    margin-right: 4px;
+}
+.submitMessage {
+    font-family: 'Playfair Display', serif;
+}

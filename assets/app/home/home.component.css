@@ -1,0 +1,19 @@
+.weddingPartyh2 {
+    margin-top: 60px;
+}
+.home-content-container {
+    text-align: center;
+}
+.row {
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+}
+.column {
+    flex: 50%;
+}
+.mainTitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 44px;
+/*'Qwigley', 'Montez', 'Pinyon Script', 'Mrs Saint Delafield', 'Miss Fajardose'*/
+}

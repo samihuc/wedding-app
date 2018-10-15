@@ -1,0 +1,80 @@
+<div class="main-content-container">
+    <h1>RSVP</h1>
+    <p>We would be honored by your presence at our wedding.</p>
+    <p>Please respond by August 21.</p>
+
+    <form class="rsvp-form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group"
+             *ngIf="showFields">
+            <div class="question">
+                <label for="name">Name*</label>
+                <input type="text" id="name" class="form-control" formControlName="name">
+            </div>
+
+            <div class="radio question">
+                <div class="checkBoxLabel">Response*</div>
+                <label><input type="radio" formControlName="attending" value="yes" (change)="onAttendingChange()">I accept with pleasure</label><br>
+                <label><input type="radio" formControlName="attending" value="no" (change)="onAttendingChange()">I decline with regret</label>
+            </div>
+
+            <div class="question">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" formControlName="email">
+            </div>
+
+            <div class="question" *ngIf="showAttendingFields">
+                <label for="numberGuests">{{numberOfGuestsTitleText}}</label>
+                <input type="number" id="numberGuests" class="form-control" formControlName="numberGuests" (change)="onNumberOfGuestsChange()">
+            </div>
+
+            <div class="question" *ngIf="showAttendingFields">
+                <label for="mealChoice">{{mealChoiceTitleText}}</label>
+                <select id="mealChoice" class="form-control" formControlName="mealChoice">
+                    <option value="Pork Loin">Roast pork loin with caramelized apples and cider jus</option>
+                    <option value="Haddock Parmesan">Baked haddock parmesan with white wine-butter sauce</option>
+                    <option value="Squash Ravioli">Butternut squash ravioli with mushroom alfredo cream sauce</option>
+                </select>
+            </div>
+
+            <div class="question" *ngIf="showAttendingFields && showGuestFields">
+                <label for="guestName">{{guestNameTitleText}}</label>
+                <input type="text" id="guestName" class="form-control" formControlName="guestName">
+            </div>
+
+            <div class="question" *ngIf="showAttendingFields && showGuestFields">
+                <label for="guestMealChoice">{{guestMealChoiceTitleText}}</label>
+                <input type="text" id="guestMealChoice" class="form-control" formControlName="guestMealChoice">
+            </div>
+
+            <div class="question" *ngIf="showAttendingFields">
+                <label for="dietaryRestrictions">Any food allergies or dietary restrictions</label>
+                <input type="text" id="dietaryRestrictions" class="form-control" formControlName="dietaryRestrictions">
+            </div>
+
+            <div class="checkBox question" *ngIf="showAttendingFields">
+                <div class="checkBoxLabel">{{respectAgreementTitleText}}</div>
+                <label class="center-block"><input type="checkbox" id="respectAgreement" formControlName="respectAgreement">I agree that I and my plus one will treat all people attending the wedding with respect, including LGBT+ attendees.</label>
+            </div>
+
+            <div class="question">
+                <label for="songSuggestion">Song suggestions for the reception</label>
+                <input type="text" id="songSuggestion" class="form-control" formControlName="songSuggestion">
+            </div>
+        </div>
+        <div class="submitMessage"
+             *ngIf="showSuccess">
+            Your response has been submitted successfully. Thanks!
+        </div>
+        <div class="submitMessage"
+             *ngIf="showFailure">
+            There was an error submitting your response. Please try again, and contact Sarah at samihuc@gmail.com if the problem persists.
+        </div>
+        <button class="btn submit-button" type="submit" [disabled]="!myForm.valid">Submit</button>
+    </form>
+    <h3>Carpooling</h3>
+    <p>If you have extra room in your car (or rental car) for carpooling or are looking for a ride in a carpool, please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnTK-oceFhPRXK2HeO6yObBN-z0MHjf2izRm5TqrOZTarWRQ/viewform?usp=sf_link" target="_blank">this form</a> by July 15.</p>
+    <p>We are hoping to arrange carpools from Montreal and/or the Montreal airport, from Albany, and possibly from other major cities in the northeast.</p>
+    <h3>Hotel room block</h3>
+    <p>We have reserved a block of hotel rooms at the Best Western in Plattsburgh. The rates for our room block are $119/night for a 2-bed room, and $114/night for a 1-bed room. Rooms are available at these rates until August 10th.</p>
+    <p>To book rooms in the block, please call the front desk at 518-561-7750, ext. 9, and use the group block name ''Mihuc-Parrott Wedding 8/31-9/2''.</p>
+</div>

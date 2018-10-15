@@ -1,0 +1,12 @@
+.guestBox {
+    background: #061a44;
+    max-width: 800px;
+    margin: 30px auto 0;
+}
+.guestBoxFooter {
+    background-color: #061a44;
+}
+hr {
+    width: auto;
+    margin: 20px 0;
+}

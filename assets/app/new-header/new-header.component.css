@@ -1,0 +1,40 @@
+.header-container {
+    margin: 0 auto;
+    max-width: 70%;
+    font-size: 20px;
+    font-family: 'Bad Script', cursive;
+}
+.headerBannerContainer {
+    width: 100%;
+}
+.headerImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerImage {
+    width: 1000px;
+    height: 200px;
+}
+.headerText {
+    text-align: center;
+    font-size: 36px;
+    margin-top: -30px;
+    /*padding-bottom: 10px;*/
+    /*font-family: 'Great Vibes', cursive;*/
+    /*font-size: 44px;*/
+}
+.active {
+    background: #061a44;
+}
+a:hover,
+a:focus {
+    background: #1E3056 !important;
+    color: #E2E3E4;
+}
+@media (max-width: 1279px) {
+    .header-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
