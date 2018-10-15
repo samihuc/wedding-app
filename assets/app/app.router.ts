@@ -12,12 +12,13 @@ import {WeddingRsvpPlaceholderComponent} from "./rsvp-placeholder/rsvp-placehold
 import {WeddingGuestsComponent} from "./guests/guests.component";
 
 const APP_ROUTES: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    // { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: WeddingHomeComponent },
     { path: 'rsvp', component: WeddingRsvpComponent },
     { path: 'registry', component: WeddingRegistryComponent },
     { path: 'directions', component: WeddingDirectionsComponent },
-    { path: 'guests/5185700300/admin', component: WeddingGuestsComponent }
+    // { path: 'guests/5185700300/admin', component: WeddingGuestsComponent },
+    { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
